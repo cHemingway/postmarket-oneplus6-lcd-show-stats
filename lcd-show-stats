@@ -1,0 +1,10 @@
+#!/sbin/openrc-run
+command=/opt/lcd-show-stats.sh
+command_background=true
+pidfile="/run/$RC_SVCNAME.pid"
+name="LCD Status Refresher"
+description="For Oneplus6, show some info on screen periodically"
+
+depend() {
+	need net
+}
